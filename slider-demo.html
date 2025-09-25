@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layered Image Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 1220px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            top: 50%!important;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .slide:hover img {
+            transform: scale(1.2);
+        }
+        /* Navigation arrows */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #333;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-arrow:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-arrow.prev {
+            left: 20px;
+        }
+
+        .nav-arrow.next {
+            right: 20px;
+        }
+
+        /* Dots navigation */
+        .dots-container {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .dot:hover {
+            background: rgba(255,255,255,0.8);
+        }
+
+        /* Slide overlay info */
+        .slide-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 30px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .slide:hover .slide-info {
+            transform: translateY(0);
+        }
+
+        .slide-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .slide-info p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slider-container {
+                height: 300px;
+            }
+            
+            .slide {
+                width: 80%;
+            }
+            
+            .slide:nth-child(2),
+            .slide:nth-child(3) {
+                width: 75%;
+            }
+            
+            .slide:nth-child(4),
+            .slide:nth-child(5) {
+                width: 70%;
+            }
+            
+            .nav-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <div class="slide">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-t8lTz6nm1tf2smJOAiZbcFKRGS7Rpa.png" alt="Beautiful Plaza">
+                <div class="slide-info">
+                    <h3>Historic Plaza</h3>
+                    <p>Beautiful European architecture with palm trees</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop" alt="Mountain Lake">
+                <div class="slide-info">
+                    <h3>Mountain Lake</h3>
+                    <p>Serene waters reflecting majestic peaks</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop" alt="Forest Path">
+                <div class="slide-info">
+                    <h3>Forest Trail</h3>
+                    <p>Peaceful walk through ancient woods</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop" alt="Ocean Sunset">
+                <div class="slide-info">
+                    <h3>Ocean Sunset</h3>
+                    <p>Golden hour by the endless sea</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=400&fit=crop" alt="City Lights">
+                <div class="slide-info">
+                    <h3>City Lights</h3>
+                    <p>Urban landscape at twilight</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="nav-arrow prev">‹</button>
+        <button class="nav-arrow next">›</button>
+
+        <div class="dots-container">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let currentSlide = 0;
+            const totalSlides = $('.slide').length;
+            let autoSlideInterval;
+
+            function updateSlides() {
+                $('.slide').each(function(index) {
+                    const position = (index - currentSlide + totalSlides) % totalSlides;
+                    const $slide = $(this);
+                    
+                    // Reset all transforms
+                    $slide.removeClass('active');
+                    
+                    switch(position) {
+                        case 0: 
+                            $slide.css({
+                                'left': '50%',
+                                  'top': '50%',
+                                'transform': 'translate(-50%, -50%) translateZ(0)',
+                                'z-index': 5,
+                                'opacity': 1,
+                                'height': '100%',
+                                'width': '65%'
+                            }).addClass('active');
+                            break;
+                        case 1: 
+                            $slide.css({
+                                'left': '75%',
+                                'top': '50%',
+                                'transform': 'translate(-50%, -50%) translateZ(-50px) rotateY(5deg)',
+                                'z-index': 4,
+                                'opacity': 0.8,
+                                'height': '80%',
+                                'width': '50%'
+                            });
+                            break;
+                        case 2: 
+                            $slide.css({
+                                'left': '85%',
+                                'top': '50%',
+                                'transform': 'translate(-50%, -50%) translateZ(-100px) rotateY(10deg)',
+                                'z-index': 3,
+                                'opacity': 0.6,
+                                'width': '50%',
+                                'height': '60%',
+                                'top': '0',
+                            });
+                            break;
+                        case 3: 
+                            $slide.css({
+                                'left': '15%',
+                                'top': '50%',
+                                'transform': 'translate(-50%,-50%) translateZ(-100px) rotateY(-10deg)',
+                                'z-index': 3,
+                                'opacity': 0.6,
+                                'width': '50%',
+                                'height': '60%'
+                            });
+                            break;
+                        case 4:
+                            $slide.css({
+                                'left': '25%',
+                                'top': '50%',
+                                 'transform': 'translate(-50%,-50%) translateZ(-50px) rotateY(-5deg)',
+                                'z-index': 4,
+                                'opacity': 0.8,
+                                'height': '80%',
+                                'width': '50%'
+                            });
+                            break;
+                    }
+                });
+
+                // Update dots
+                $('.dot').removeClass('active').eq(currentSlide).addClass('active');
+            }
+
+            // Next slide
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlides();
+            }
+
+            // Previous slide
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlides();
+            }
+
+            // Auto slide
+            function startAutoSlide() {
+                // autoSlideInterval = setInterval(nextSlide, 4000);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Event listeners
+            $('.next').click(function() {
+                stopAutoSlide();
+                nextSlide();
+                startAutoSlide();
+            });
+
+            $('.prev').click(function() {
+                stopAutoSlide();
+                prevSlide();
+                startAutoSlide();
+            });
+
+            // Dot navigation
+            $('.dot').click(function() {
+                stopAutoSlide();
+                currentSlide = $(this).index();
+                updateSlides();
+                startAutoSlide();
+            });
+
+            // Click on slide to make it center
+            $('.slide').click(function() {
+                const clickedIndex = $(this).index();
+                if (clickedIndex !== currentSlide) {
+                    stopAutoSlide();
+                    currentSlide = clickedIndex;
+                    updateSlides();
+                    startAutoSlide();
+                }
+            });
+
+            $(document).keydown(function(e) {
+                if (e.keyCode === 37) {
+                    stopAutoSlide();
+                    prevSlide();
+                    startAutoSlide();
+                } else if (e.keyCode === 39) { 
+                    stopAutoSlide();
+                    nextSlide();
+                    startAutoSlide();
+                }
+            });
+
+            $('.slider-container').hover(
+                function() { stopAutoSlide(); },
+                function() { startAutoSlide(); }
+            );
+
+            updateSlides();
+            startAutoSlide();
+
+            let startX = 0;
+            let endX = 0;
+
+            $('.slider-wrapper').on('touchstart', function(e) {
+                startX = e.originalEvent.touches[0].clientX;
+            });
+
+            $('.slider-wrapper').on('touchend', function(e) {
+                endX = e.originalEvent.changedTouches[0].clientX;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > 50) { 
+                    stopAutoSlide();
+                    if (diff > 0) {
+                        nextSlide(); 
+                    } else {
+                        prevSlide(); 
+                    }
+                    startAutoSlide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
