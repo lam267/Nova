@@ -1,9 +1,6 @@
 /* ===================================
    RESET & NORMALIZATION
    =================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -57,6 +54,7 @@ h6 {
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 16px;
+    color: var(--text-primary);
 }
 
 h1 {
@@ -84,7 +82,7 @@ h6 {
 }
 
 p {
-    margin-bottom: 16px;
+    margin-bottom: 0px;
 }
 
 a {
@@ -191,22 +189,21 @@ figcaption {
     max-width: 1260px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 /* HERO SECTION */
 .hero-section {
     position: relative;
-    background: url('./Images/Banner.png') center/cover no-repeat;
-    min-height: 780px;
+    background: url('https://na.eventscloud.com/file_uploads/cdde497f0ee2de616c64c7ad35f5356c_Banner.png') center/cover no-repeat;
+    min-height: 740px;
     display: flex;
-    align-items: center;
     justify-content: center;
     padding: 0;
     margin-bottom: 0;
     overflow: hidden;
     margin-bottom: 55px;
 }
-
 .hero-section::before {
     content: '';
     position: absolute;
@@ -217,20 +214,32 @@ figcaption {
     background: rgba(36, 57, 64, 0.75);
     z-index: 1;
 }
-
+.video-background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.hero-section  iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
 .hero-content {
     position: relative;
     z-index: 2;
     color: #fff;
+    max-width: 1258px;
+    padding: 0 20px;
+    padding-top: 132px;
 }
 
 .hero-title {
-    font-size: 2.8rem;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    background: rgba(255, 255, 255, 0.12);
-    display: inline-block;
-    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 32px;
 }
 
 .hero-subtitle {
@@ -240,20 +249,20 @@ figcaption {
     font-size: 45px;
     line-height: 109.8%;
     color: #FFFFFF;
+    margin-top: 110px;
+    margin-bottom: 0px;
 }
 
 .event-info {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    width: 100%;
 }
 
 .event-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 128px;
-    color: #fff;
+    margin-left: 10px;
 }
 
 .cta-button {
@@ -265,7 +274,7 @@ figcaption {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #142023;
-    padding: 12px 32px;
+    padding: 12px 15px;
     height: 50px;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
@@ -278,22 +287,28 @@ figcaption {
     color: #fff;
 }
 
-.event-details {}
+.event-details {
+    margin-bottom: 16px;
+}
 
 .event-date {
-    font-weight: 700;
+    font-family: Proxima Nova;
+    font-weight: 600;
     font-size: 30px;
-    line-height: 137.3%;
+    line-height: 137%;
+    letter-spacing: 0%;
     text-align: right;
     color: #FFFFFF;
 }
 
 .event-location {
-    font-weight: 500;
+    font-family: Proxima Nova;
+    font-weight: 400;
     font-size: 30px;
-    line-height: 137.3%;
+    line-height: 137%;
+    letter-spacing: 0%;
     text-align: right;
-    color: #FFFFFF;
+
 }
 
 .content-section {
@@ -301,10 +316,14 @@ figcaption {
     padding-bottom: 50px;
 }
 
+.content-section .container {
+    max-width: 1234px;
+}
+
 .text-block {
-    gap: 84px;
+    gap: 74px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -315,7 +334,7 @@ figcaption {
 
 .content-text {}
 
-.content-text p {
+.content-text .text-block p {
     max-width: 431px;
     width: 100%;
     font-family: 'Montserrat';
@@ -331,27 +350,47 @@ figcaption {
 }
 
 .info-grid {
-    padding-top: 67px;
+    padding-top: 70px;
     display: flex;
     flex-wrap: wrap;
     gap: 13px 77px;
-    margin-bottom: 56px;
+    margin-bottom: 52px;
 }
 
 .info-item {
     max-width: 431px;
     width: 100%;
+    align-items: start;
     /* width: calc(100%/2 - 38.5px); */
     display: flex;
-    align-items: flex-start;
-    gap: 24px;
+    gap: 8px;
+}
+
+.info-icon {
+    width: 35px;
+    height: 28px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-icon svg {
+    margin-bottom: -3px;
 }
 
 .info-item span {
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+
 }
 
 .info-item p {
+    text-transform: capitalize;
+    font-family: 'Montserrat';
+
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
@@ -368,9 +407,9 @@ figcaption {
     font-weight: normal;
     font-size: 22px;
     line-height: 136%;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.023em;
     color: #142023;
-    width: 100%;
+    width: 92%;
     max-width: 100%;
 }
 
@@ -382,11 +421,11 @@ figcaption {
 /* WHAT TO EXPECT SECTION */
 .expect-section {
     background: #142023;
-    padding: 100px 0 70px 0;
+    padding: 82px 0 70px 0;
 }
 
 .expect-container {
-    max-width: 1165px;
+    max-width: 1180px;
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
@@ -405,6 +444,7 @@ figcaption {
     line-height: 46px;
     text-transform: uppercase;
     color: #E8ECED;
+    margin-bottom: 0px;
 }
 
 .expect-list {
@@ -413,6 +453,8 @@ figcaption {
     display: flex;
     flex-direction: column;
     margin-bottom: 22px;
+    max-width: 585px;
+    padding-top: 20px;
 }
 
 .expect-list li {
@@ -422,9 +464,8 @@ figcaption {
     font-size: 16px;
     line-height: 20px;
     color: #E8ECED;
-    padding: 18px;
-    border-bottom: 3px solid #9ed2745b;
-    line-height: 1.5;
+    padding: 18px 18px 18px 22px;
+    border-bottom: 1px solid #9ED274;
     font-weight: 400;
     transition: background 0.2s;
     margin: 0px;
@@ -437,8 +478,10 @@ figcaption {
 
 .expect-details {
     display: flex;
-    gap: 68px;
-    align-items: flex-start;
+    gap: 72px;
+    align-items: center;
+    /* justify-content: space-around; */
+    margin-bottom: 14px;
 }
 
 .expect-cta {
@@ -478,53 +521,67 @@ figcaption {
 
 /* AGENDA SECTION */
 .agenda-section {
-    background: #f6f8f7;
-    padding: 36px 0 24px 0;
+    padding: 40px  0 49px 0;
     background: rgba(36, 57, 64, 0.05);
-    border-top: 6px solid #1b2626;
 }
 
 .agenda-container {
-    max-width: 1200px;
+    max-width: 1234px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 20px;
 }
 
 .agenda-title {
-    font-size: 2rem;
+    font-family: Montserrat;
     font-weight: 700;
-    margin-bottom: 32px;
-    color: #1b2626;
-    letter-spacing: 0.02em;
+    font-size: 25px;
+    margin-bottom: 30px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 2%;
+    text-transform: uppercase;
 }
 
 .agenda-grid {
     display: flex;
     gap: 0;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     border-radius: 8px;
     overflow: hidden;
-    background: #f6f8f7;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
 }
 
 .agenda-day {
     flex: 1 1 0;
-    padding: 0 24px;
-    border-right: 1.5px solid #b6e2b6;
+    padding: 0 25px;
+    border-right: 1.5px solid #9ED274;
     min-width: 170px;
+    padding-bottom: 17px;
+}
+
+.agenda-day:first-child {
+    padding-left: 0;
+    max-width: 183px;
+    width: 100%;
 }
 
 .agenda-day:last-child {
     border-right: none;
+    padding-right: 0;
+}
+
+.agenda-day:last-child li:last-child {
+    font-family: Proxima Nova;
+    font-size: unset;
 }
 
 .agenda-day-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #22314a;
-    margin-bottom: 10px;
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 1.27;
+    letter-spacing: 0%;
 }
 
 .agenda-day ul {
@@ -534,54 +591,47 @@ figcaption {
 }
 
 .agenda-day li {
-    color: #22314a;
-    font-size: 1rem;
-    margin-bottom: 6px;
-    line-height: 1.5;
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: var(--Color-4, #243940);
 }
 
-.agenda-note {
-    color: #6c757d;
-    font-size: 0.95em;
-    font-style: italic;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    display: block;
+.agenda-day li:last-child {
+    font-family: 'Montserrat';
+    font-size: 8px;
+    line-height: 16px;
+}
+
+.agenda-day .agenda-note {
+    font-family: Proxima Nova;
+    font-size: 12px;
+    color: var(--Color-3, #3D5661);
+    margin-top: -5px;
 }
 
 .agenda-label {
     display: inline-block;
-    font-size: 1em;
+    font-family: Proxima Nova;
     font-weight: 700;
-    background: #8bc34a;
-    color: #22314a;
-    border-radius: 3px;
-    padding: 3px 16px 4px 16px;
-    margin-top: 8px;
-    margin-bottom: 2px;
-    letter-spacing: 0.04em;
+    font-size: 16px;
+    line-height: 127%;
+    letter-spacing: 3%;
+    font-variant: small-caps;
+    background: #9ED274;
+    color: #142023;
+    padding: 6px 10px;
+    margin-top: 15px;
+    border: none;
     text-transform: uppercase;
-}
-
-.agenda-label.strategy {
-    background: #b6e2b6;
-    color: #22314a;
-}
-
-.agenda-label.customer {
-    background: #8bc34a;
-    color: #22314a;
-}
-
-.agenda-label.culture {
-    background: #6bbf59;
-    color: #fff;
 }
 
 /* BARCELONA YOUR WAY SECTION */
 .barcelona-section {
     background: #fff;
-    padding: 48px 0 0 0;
+    padding: 85px 0 88px 0;
 }
 
 .barcelona-container {
@@ -590,8 +640,8 @@ figcaption {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 40px;
-    padding: 0 32px 32px 32px;
+    gap: 46px;
+    padding: 0 20px;
     flex-wrap: wrap;
 }
 
@@ -610,12 +660,16 @@ figcaption {
     color: #142023;
     max-width: 283px;
     width: 100%;
+    margin-top: 0px;
 }
 
 .barcelona-desc {
     font-family: 'Proxima Nova';
     font-size: 16px;
-    letter-spacing: 0.03em;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0px;
 }
 
 .barcelona-highlight {
@@ -628,21 +682,15 @@ figcaption {
 }
 
 .barcelona-experiences {
-    flex: 3 1 600px;
     display: flex;
-    gap: 24px;
+    gap: 32px;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
 .experience-card {
-    background: #f6f8f7;
-    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    padding: 18px 18px 14px 18px;
-    max-width: 210px;
-    min-width: 180px;
-    flex: 1 1 180px;
+    width: calc(100%/5 - 25.6px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -651,28 +699,650 @@ figcaption {
 
 .experience-card img {
     width: 100%;
-    height: 120px;
+    height: 240px;
     object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .experience-card h4 {
-    font-size: 1.08rem;
+    font-family: Proxima Nova;
     font-weight: 700;
-    color: #22314a;
-    margin-bottom: 2px;
+    font-size: 22px;
+    line-height: 23px;
+    margin-bottom: 5px;
 }
 
 .experience-card p {
-    font-size: 0.98rem;
-    color: #22314a;
-    margin-bottom: 2px;
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--Color-5, #142023);
+    margin-bottom: 8px;
+
 }
 
 .experience-timing {
-    font-size: 0.92rem;
-    color: #6c757d;
-    margin-top: 2px;
-    line-height: 1.4;
+    color: var(--Color-3, #3D5661);
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0%;
+}
+
+.experience-timing strong {
+    font-weight: 600;
+}
+
+/* TRAVELING TO BARCELONA SECTION */
+.travel-section {
+    background: var(--Color-5, #142023);
+    padding: 100px 0 90px 0;
+    border: 1px solid transparent;
+}
+
+.travel-container {
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 84px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.travel-title {
+    flex: 1 1 326px;
+    max-width: 326px;
+    display: flex;
+    color: var(--Color-6, #E8ECED);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.travel-title h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--Color-6, #E8ECED);
+    line-height: 48px;
+    margin-top: 0px;
+}
+
+.travel-content {
+    flex: 1;
+}
+
+.travel-content ul {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.travel-content li {
+    margin-bottom: 0;
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.03px;
+    color: var(--Color-6, #E8ECED);
+    position: relative;
+}
+
+.travel-content li::before {
+    content: '';
+    height: 4px;
+    width: 4px;
+    background: #FFFFFF;
+    color: #ffffff;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: -15px;
+}
+
+.travel-content a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.travel-content a:hover {
+    color: #fff;
+}
+
+/* Slider    */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1220px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 43px;
+    margin-bottom: 120px;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    top: 50% !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.slide:hover img {
+    transform: scale(1.2);
+}
+
+/* Navigation arrows */
+.nav-arrow {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    bottom: -65px;
+    background-color: transparent;
+}
+
+.nav-arrow.prev {
+    transform: translateX(-50%);
+    left: 42%;
+}
+
+.nav-arrow.next {
+    left: 58%;
+    transform: translateX(-50%);
+}
+
+/* Dots navigation */
+.dots-container {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #999999;
+}
+
+.dot.active {
+    background: var(--Color, #9ED274);
+    transform: scale(1.2);
+}
+
+/* Slide overlay info */
+.slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.slide:hover .slide-info {
+    transform: translateY(0);
+}
+
+.slide-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.slide-info p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/*  */
+/* FOOTER */
+.site-footer {
+    background: var(--Color-4, #243940);
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.footer-logo {
+    width: 395px;
+    height: 71px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+.footer-contact {
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 137%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-contact a {
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 137%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color: #fff;
+}
+
+.footer-contact a:hover {
+    color: #8bc34a;
+}
+
+@media (max-width: 1024px) {
+    .agenda-container,
+    .barcelona-container,
+    .expect-container,
+    .travel-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .hero-title {
+        margin-bottom: 20px;
+    }
+    .text-block {
+        gap: 30px;
+    }
+
+    .info-item {
+        width: calc(100% / 2 - 38.5px);
+        max-width: 100%;
+        gap: 8px;
+    }
+
+    .barcelona-info {
+        gap: 30px;
+    }
+
+    .barcelona-experiences {
+        gap: 20px;
+    }
+    .content-text .text-block p {
+        font-size: 26px;
+        max-width: 100%;
+        line-height: 1.4;
+    }
+    .experience-card {
+        width: calc(100%/3 - 15px);
+        min-width: 180px;
+    }
+
+    .expect-details {
+        gap: 30px;
+    }
+
+    .expect-image {
+        max-width: 300px;
+    }
+
+    .agenda-grid {
+        flex-wrap: wrap;
+    }
+
+    .agenda-day {
+        min-width: 160px;
+        padding: 0 10px;
+    }
+
+    .slider-container {
+        height: 260px;
+        margin-bottom: 95px;
+    }
+
+    .slide img {
+        height: 100%;
+    }
+
+    .footer-logo {
+        width: 220px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        height: 300px;
+    }
+
+    .slide {
+        width: 80%;
+    }
+
+    .slide:nth-child(2),
+    .slide:nth-child(3) {
+        width: 75%;
+    }
+
+    .slide:nth-child(4),
+    .slide:nth-child(5) {
+        width: 70%;
+    }
+
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .hero-section {
+        min-height: 420px;
+        padding-bottom: 30px;
+    }
+
+    .hero-content {
+        padding-top: 65px;
+        text-align: center;
+    }
+
+    .hero-title img,
+    .event-title img {
+        max-width: 90vw;
+        height: auto;
+    }
+
+    .event-info {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    .event-date,
+    .event-location {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .content-section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .text-block {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .content-image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .content-text .text-block p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    .info-grid {
+        flex-direction: column;
+        gap: 18px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .info-item {
+        max-width: 100%;
+        width: 100%;
+        gap: 4px;
+    }
+    .info-item p {
+        font-size: 16px;
+    }
+    .venue-description p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .expect-section {
+        padding: 40px 0 30px 0;
+    }
+
+    .expect-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .expect-details {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .expect-image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .expect-title {
+        font-size: 24px;
+    }
+    .expect-list {
+        max-width: 100%;
+        padding-top: 10px;
+    }
+    .expect-list li {
+        font-size: 16px;
+        padding: 10px 8px;
+    }
+
+    .agenda-section {
+        padding: 30px 0 20px 0;
+    }
+
+    .agenda-title {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .agenda-day {
+        min-width: unset;
+    }
+
+    .agenda-day-title {
+        font-size: 16px;
+    }
+
+    .agenda-day li {
+        font-size: 14px;
+    }
+
+    .barcelona-section {
+        padding: 40px 0 30px 0;
+    }
+
+    .barcelona-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .barcelona-info {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .barcelona-title {
+        font-size: 22px;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    .barcelona-desc,
+    .barcelona-highlight {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    .experience-card {
+        width: calc(100%/2 - 16px);
+        max-width: 100%;
+    }
+
+    .experience-card img {
+        width: 100%;
+    }
+
+    .experience-card h4 {
+        font-size: 20px;
+    }
+
+    .experience-card p,
+    .experience-timing {
+        font-size: 16px;
+    }
+
+    .travel-section {
+        padding: 40px 0 30px 0;
+    }
+
+    .travel-container {
+        gap: 18px;
+    }
+
+    .travel-title {
+        flex: 1 1 100%;
+        max-width: 100%;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .travel-title h2 {
+        font-size: 22px;
+    }
+
+    .travel-content ul {
+        gap: 10px;
+    }
+
+    .travel-content li {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .slider-container {
+        height: 160px;
+        margin-bottom: 40px;
+    }
+
+    .slide img {
+        height: 100%;
+    }
+
+    .nav-arrow {
+        width: 28px;
+        height: 28px;
+        left: 38% !important;
+        font-size: 12px;
+        bottom: -40px;
+    }
+
+    .nav-arrow.next {
+        left: 62% !important;
+    }
+
+    .dots-container {
+        bottom: -30px;
+        gap: 6px;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+    }
+
+
+}
+
+@media (max-width: 565px) {
+    .agenda-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .agenda-day {
+        width: 100%;
+        max-width: 100%!important;
+        border-right: none;
+        border-bottom: 1.5px solid #9ED274;
+        padding: 0px;
+        padding-bottom: 10px;
+    }
+    .experience-card {
+        width: 100%;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .site-footer {
+        padding: 24px 0 18px 0;
+    }
+
+    .footer-logo {
+        width: 120px;
+        height: 22px;
+        margin-bottom: 8px;
+    }
+
+    .footer-contact {
+        font-size: 13px;
+    }
 }

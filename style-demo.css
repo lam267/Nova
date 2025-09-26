@@ -1,0 +1,266 @@
+body {
+    background: #fff;
+    color: var(--Color-5, #142023);
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.barca-header {
+    background: #243940;
+    color: #fff;
+    height: 181px;
+    display: flex;
+    align-items: center;
+}
+
+.barca-header .container {
+    max-width: 1236px;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.barca-logo {
+    height: 81px;
+    max-width: 588px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.barca-logo img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.barca-back {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    line-height: 110.00000000000001%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    padding: 15px;
+    background: #fff;
+    color: #243940;
+    height: 52px;
+    margin-top: 15px;
+}
+
+.barca-back:hover {
+    background: #e8eced;
+}
+
+.barca-main {
+    max-width: 1238px;
+    margin: 0 auto;
+    padding: 135px 20px 0 20px;
+}
+
+.barca-main>div:first-child {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.barca-main-left {
+    flex: 1.2;
+}
+
+.barca-main-right {
+    flex: 2;
+}
+
+.barca-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+}
+
+.barca-desc {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.barca-desc-note {
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
+.barca-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.barca-item {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.barca-item-thumbnail {
+    width: 100%;
+    max-width: 581.5px;
+    height: 230.6666717529297px;
+}
+
+.barca-item-img {
+    width: 100%;
+    max-width: 581.5px;
+    object-fit: cover;
+    box-shadow: none;
+    height: auto;
+}
+
+.barca-item-content {
+    flex: 1;
+    /* padding: 44px 0 0px 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.barca-item-title {
+    font-family: Proxima Nova;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    margin-bottom: 12px;
+}
+
+.barca-item-desc {
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    margin-bottom: 16px;
+}
+
+.barca-item-link {
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #243940;
+}
+
+.barca-item-link-a {
+    font-family: Proxima Nova;
+    color: #243940;
+    text-decoration: underline;
+}
+
+.barca-item-link:hover {
+    color: #22314a;
+}
+
+.site-footer {
+    height: 181px;
+    background: var(--Color-5, #142023);
+    width: 100%;
+    display: flex;
+    margin-top: 106px;
+}
+
+.site-footer .container {
+    max-width: 1238px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.site-footer .barca-back {
+    margin-top: 0px;
+}
+
+@media (max-width: 1024px) {
+    .barca-header .container, .barca-main {
+        padding: 0 20px;
+    }
+    .barca-main > div:first-child {
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 18px;
+        margin-top: 30px;
+    }
+    .barca-title {
+        /* font-size: 1.5rem; */
+    }
+    .barca-item {
+        flex-direction: column;
+        gap: 0;
+    }
+    .barca-item-thumbnail {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 12px;
+    }
+    .barca-item-img {
+        width: 100%;
+        max-width: 100%;
+    }
+    .barca-item-content {
+        padding: 16px 12px 16px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+  
+    .site-footer {
+        padding: 14px 0 8px 0;
+        margin-top: 30px;
+    }
+    .site-footer .footer-logo {
+        width: 90px;
+        height: 18px;
+        margin-bottom: 6px;
+    }
+    .site-footer,
+    .barca-header {
+        height: 100px;
+    }
+    .barca-logo img {
+        width: 80%;
+        height: auto;
+    }
+}
