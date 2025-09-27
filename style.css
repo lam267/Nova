@@ -243,8 +243,8 @@ figcaption {
     font-size: 45px;
     line-height: 109.8%;
     color: #FFFFFF;
-    margin-top: 110px;
-    margin-bottom: 0px;
+    margin-top: 110px!important;
+    margin-bottom: 0px!important;
 }
 
 .event-info {
@@ -343,10 +343,10 @@ figcaption {
 }
 
 .info-grid {
-    padding-top: 70px;
+    padding-top: 34px;
     display: flex;
     flex-wrap: wrap;
-    gap: 13px 77px;
+    gap: 13px 68px;
     margin-bottom: 52px;
 }
 
@@ -357,14 +357,13 @@ figcaption {
     /* width: calc(100%/2 - 38.5px); */
     display: flex;
     gap: 8px;
+    margin-left: 8px;
 }
 
 .info-icon {
     width: 35px;
     height: 28px;
-    padding: 5px 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -433,23 +432,24 @@ figcaption {
 }
 
 .expect-title {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 46px;
-    text-transform: uppercase;
-    color: #E8ECED;
-    margin-bottom: 0px;
+    font-family: 'Montserrat'!important;
+    font-weight: 700!important;
+    font-size: 40px!important;
+    line-height: 46px!important;
+    text-transform: uppercase!important;
+    color: #E8ECED!important;
+    margin-bottom: 0px!important;
 }
 
 .expect-list {
-    list-style: none;
+    list-style: none!important;
     padding: 0;
     display: flex;
     flex-direction: column;
     margin-bottom: 22px;
     max-width: 585px;
-    padding-top: 20px;
+    padding-top: 0px;
+    margin: 0px!important;
 }
 
 .expect-list li {
@@ -459,7 +459,7 @@ figcaption {
     font-size: 16px;
     line-height: 20px;
     color: #E8ECED;
-    padding: 18px 18px 18px 22px;
+    padding: 18px 18px 18px 22px!important;
     border-bottom: 1px solid #9ED274;
     font-weight: 400;
     transition: background 0.2s;
@@ -528,12 +528,12 @@ figcaption {
 }
 
 .agenda-title {
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 25px;
-    margin-bottom: 30px;
-    line-height: 110.00000000000001%;
-    letter-spacing: 2%;
+    font-family: Montserrat!important;
+    font-weight: 700!important;
+    font-size: 25px!important;
+    margin-bottom: 30px!important;
+    line-height: 110.00000000000001%!important;
+    letter-spacing: 2%!important;
     text-transform: uppercase;
 }
 
@@ -571,10 +571,10 @@ figcaption {
 }
 
 .agenda-day-title {
-    font-family: Proxima Nova;
-    font-weight: 400;
-    font-style: Bold;
-    font-size: 20px;
+    font-family: Proxima Nova!important;
+    font-weight: 400!important;
+    font-style: Bold!important;
+    font-size: 20px!important;
     line-height: 1.27;
     letter-spacing: 0%;
 }
@@ -647,12 +647,12 @@ figcaption {
 }
 
 .barcelona-title {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    text-transform: uppercase;
-    color: #142023;
+    font-family: 'Montserrat'!important;
+    font-weight: 700!important;
+    font-size: 40px!important;
+    line-height: 48px!important;
+    text-transform: uppercase!important;
+    color: #142023!important;
     max-width: 283px;
     width: 100%;
     margin-top: 0px;
@@ -719,15 +719,15 @@ figcaption {
 
 .experience-timing {
     color: var(--Color-3, #3D5661);
-    font-family: Proxima Nova;
+    font-family: "Proxima Nova";
+    font-size: 14px;
     font-weight: 400;
-    font-size: 13px;
     line-height: 19px;
-    letter-spacing: 0%;
+    font-variant: all-small-caps;
 }
 
 .experience-timing strong {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* TRAVELING TO BARCELONA SECTION */
@@ -742,7 +742,7 @@ figcaption {
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
-    gap: 84px;
+    gap: 80px;
     padding: 0 20px;
     flex-wrap: wrap;
 }
@@ -757,12 +757,12 @@ figcaption {
 }
 
 .travel-title h2 {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 40px;
-    text-transform: uppercase;
-    color: var(--Color-6, #E8ECED);
+    font-family: 'Montserrat'!important;
+    font-weight: 700!important;
+    font-style: Bold!important;
+    font-size: 40px!important;
+    text-transform: uppercase!important;
+    color: var(--Color-6, #E8ECED)!important    ;
     line-height: 48px;
     margin-top: 0px;
 }
@@ -772,7 +772,7 @@ figcaption {
 }
 
 .travel-content ul {
-    list-style: none;
+    list-style: none!important;
     padding-left: 0px;
     margin: 0;
     display: flex;
@@ -901,7 +901,7 @@ figcaption {
 
 .dot.active {
     background: var(--Color, #9ED274);
-    transform: scale(1.2);
+    transform: scale(1.333);
 }
 
 /* Slide overlay info */
@@ -974,11 +974,22 @@ figcaption {
     line-height: 137%;
     letter-spacing: 0%;
     text-align: center;
-    text-decoration: underline;
+    position: relative;
     text-decoration-style: solid;
     color: #fff;
 }
-
+.footer-contact a::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin-top: 4px;
+    transition: background 0.3s ease;
+    left: 0;
+    top: 18px;
+}
 .footer-contact a:hover {
     color: #8bc34a;
 }
@@ -997,7 +1008,7 @@ figcaption {
         padding-right: 20px;
     }
     .hero-title {
-        margin-bottom: 20px;
+        margin-bottom: 20px!important;
     }
     .text-block {
         gap: 30px;
@@ -1174,7 +1185,7 @@ figcaption {
     }
 
     .expect-title {
-        font-size: 24px;
+        font-size: 24px!important;
     }
     .expect-list {
         max-width: 100%;
@@ -1190,8 +1201,8 @@ figcaption {
     }
 
     .agenda-title {
-        font-size: 18px;
-        margin-bottom: 18px;
+        font-size: 18px!important;
+        margin-bottom: 18px!important;
     }
 
     .agenda-day {
@@ -1199,7 +1210,7 @@ figcaption {
     }
 
     .agenda-day-title {
-        font-size: 16px;
+    font-size: 16px!important;
     }
 
     .agenda-day li {
@@ -1222,8 +1233,8 @@ figcaption {
     }
 
     .barcelona-title {
-        font-size: 22px;
-        line-height: 1.2;
+        font-size: 22px!important;
+        line-height: 1.2!important;
         max-width: 100%;
     }
 
@@ -1267,7 +1278,7 @@ figcaption {
     }
 
     .travel-title h2 {
-        font-size: 22px;
+        font-size: 22px!important;
     }
 
     .travel-content ul {

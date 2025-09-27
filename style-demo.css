@@ -4,7 +4,9 @@ body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
 }
-
+a {
+        color: var(--Color-5, #142023)!important;
+}
 * {
     margin: 0;
     padding: 0;
@@ -60,12 +62,13 @@ body {
     padding: 15px;
     background: #fff;
     color: #243940;
-    height: 52px;
+    height: 50px;
     margin-top: 15px;
 }
 
 .barca-back:hover {
-    background: #e8eced;
+    background: #22314a;
+    color: #fff!important;
 }
 
 .barca-main {
@@ -153,6 +156,7 @@ body {
 }
 
 .barca-item-title {
+    color: var(--Color-5, #142023);
     font-family: Proxima Nova;
     font-weight: 600;
     font-size: 27px;
@@ -162,6 +166,7 @@ body {
 }
 
 .barca-item-desc {
+    color: var(--Color-5, #142023);
     font-family: Proxima Nova;
     font-weight: 400;
     font-size: 16px;
