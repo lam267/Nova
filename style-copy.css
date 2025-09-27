@@ -198,6 +198,121 @@ figcaption {
     width: 100%;
 }
 
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    background: url('https://na.eventscloud.com/file_uploads/cdde497f0ee2de616c64c7ad35f5356c_Banner.png') center/cover no-repeat;
+    min-height: 740px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    margin-bottom: 55px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(36, 57, 64, 0.75);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 1258px;
+    padding: 0 20px;
+    padding-top: 132px;
+}
+
+.hero-title {
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.hero-subtitle {
+    max-width: 617px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 109.8%;
+    color: #FFFFFF;
+    margin-top: 110px!important;
+    margin-bottom: 0px!important;
+}
+
+.event-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.event-title {
+    margin-left: 10px;
+}
+
+.cta-button {
+    background: #fff;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 109.8%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #142023;
+    padding: 12px 15px;
+    height: 50px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 10px;
+    border: none;
+}
+
+.cta-button:hover {
+    background: #22314a;
+    color: #fff;
+}
+
+.event-details {
+    margin-bottom: 16px;
+}
+
+.event-date {
+    font-family: Proxima Nova;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 137%;
+    letter-spacing: 0%;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+.event-location {
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 137%;
+    letter-spacing: 0%;
+    text-align: right;
+
+}
+
+.content-section {
+    padding-top: 55px;
+    padding-bottom: 50px;
+}
+
+.content-section .container {
+    max-width: 1234px;
+}
 .hero-banner {
     position: relative;
     width: 100%;
@@ -427,7 +542,6 @@ figcaption {
 }
 
 .summit-intro__highlight {}
-
 .text-block {
     gap: 74px;
     display: flex;
@@ -439,7 +553,6 @@ figcaption {
     max-width: 685px;
     width: 100%;
 }
-
 .content-text {}
 
 .content-text .text-block p {
@@ -458,11 +571,11 @@ figcaption {
 }
 
 .info-grid {
-    padding-top: 66px;
+    padding-top: 34px;
     display: flex;
     flex-wrap: wrap;
-    gap: 13px 77px;
-    margin-bottom: 64px;
+    gap: 13px 68px;
+    margin-bottom: 52px;
 }
 
 .info-item {
@@ -472,14 +585,13 @@ figcaption {
     /* width: calc(100%/2 - 38.5px); */
     display: flex;
     gap: 8px;
+    margin-left: 8px;
 }
 
 .info-icon {
     width: 35px;
     height: 28px;
-    padding: 5px 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -521,7 +633,9 @@ figcaption {
     max-width: 100%;
 }
 
-.content-image {}
+.content-image iframe{
+    border: none;
+}
 
 .subtitle {}
 
@@ -568,23 +682,24 @@ figcaption {
 }
 
 .expect-title {
-    font-family: 'Montserrat' !important;
-    font-weight: 700 !important;
-    font-size: 40px !important;
-    line-height: 46px !important;
-    text-transform: uppercase !important;
-    color: #E8ECED !important;
-    margin-bottom: 0px !important;
+    font-family: 'Montserrat'!important;
+    font-weight: 700!important;
+    font-size: 40px!important;
+    line-height: 46px!important;
+    text-transform: uppercase!important;
+    color: #E8ECED!important;
+    margin-bottom: 0px!important;
 }
 
 .expect-list {
-    list-style: none;
+    list-style: none!important;
     padding: 0;
     display: flex;
     flex-direction: column;
     margin-bottom: 22px;
     max-width: 585px;
-    padding-top: 20px;
+    padding-top: 0px;
+    margin: 0px!important;
 }
 
 .expect-list li {
@@ -594,7 +709,7 @@ figcaption {
     font-size: 16px;
     line-height: 20px;
     color: #E8ECED;
-    padding: 18px 18px 18px 22px;
+    padding: 18px 18px 18px 22px!important;
     border-bottom: 1px solid #9ED274;
     font-weight: 400;
     transition: background 0.2s;
@@ -651,7 +766,7 @@ figcaption {
 
 /* AGENDA SECTION */
 .agenda-section {
-    padding: 40px 0 49px 0;
+    padding: 40px  0 49px 0;
     background: rgba(36, 57, 64, 0.05);
 }
 
@@ -663,12 +778,12 @@ figcaption {
 }
 
 .agenda-title {
-    font-family: Montserrat !important;
-    font-weight: 700 !important;
-    font-size: 25px !important;
-    margin-bottom: 30px !important;
-    line-height: 110.00000000000001% !important;
-    letter-spacing: 2% !important;
+    font-family: Montserrat!important;
+    font-weight: 700!important;
+    font-size: 25px!important;
+    margin-bottom: 30px!important;
+    line-height: 110.00000000000001%!important;
+    letter-spacing: 2%!important;
     text-transform: uppercase;
 }
 
@@ -706,10 +821,10 @@ figcaption {
 }
 
 .agenda-day-title {
-    font-family: Proxima Nova;
-    font-weight: 400;
-    font-style: Bold;
-    font-size: 20px;
+    font-family: Proxima Nova!important;
+    font-weight: 400!important;
+    font-style: Bold!important;
+    font-size: 20px!important;
     line-height: 1.27;
     letter-spacing: 0%;
 }
@@ -782,12 +897,12 @@ figcaption {
 }
 
 .barcelona-title {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    text-transform: uppercase;
-    color: #142023;
+    font-family: 'Montserrat'!important;
+    font-weight: 700!important;
+    font-size: 40px!important;
+    line-height: 48px!important;
+    text-transform: uppercase!important;
+    color: #142023!important;
     max-width: 283px;
     width: 100%;
     margin-top: 0px;
@@ -819,7 +934,6 @@ figcaption {
 }
 
 .experience-card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     width: calc(100%/5 - 25.6px);
     display: flex;
     flex-direction: column;
@@ -878,7 +992,7 @@ figcaption {
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
-    gap: 84px;
+    gap: 80px;
     padding: 0 20px;
     flex-wrap: wrap;
 }
@@ -893,12 +1007,12 @@ figcaption {
 }
 
 .travel-title h2 {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 40px;
-    text-transform: uppercase;
-    color: var(--Color-6, #E8ECED);
+    font-family: 'Montserrat'!important;
+    font-weight: 700!important;
+    font-style: Bold!important;
+    font-size: 40px!important;
+    text-transform: uppercase!important;
+    color: var(--Color-6, #E8ECED)!important    ;
     line-height: 48px;
     margin-top: 0px;
 }
@@ -908,7 +1022,7 @@ figcaption {
 }
 
 .travel-content ul {
-    list-style: none;
+    list-style: none!important;
     padding-left: 0px;
     margin: 0;
     display: flex;
@@ -958,7 +1072,7 @@ figcaption {
     height: 400px;
     margin: 0 auto;
     margin-top: 43px;
-    margin-bottom: 142px;
+    margin-bottom: 120px;
 }
 
 .slider-wrapper {
@@ -973,7 +1087,6 @@ figcaption {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     cursor: pointer;
 }
@@ -1038,7 +1151,7 @@ figcaption {
 
 .dot.active {
     background: var(--Color, #9ED274);
-    transform: scale(1.2);
+    transform: scale(1.333);
 }
 
 /* Slide overlay info */
@@ -1111,17 +1224,32 @@ figcaption {
     line-height: 137%;
     letter-spacing: 0%;
     text-align: center;
-    text-decoration: underline;
+    position: relative;
     text-decoration-style: solid;
     color: #fff;
 }
-
+.footer-contact a::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin-top: 4px;
+    transition: background 0.3s ease;
+    left: 0;
+    top: 18px;
+}
 .footer-contact a:hover {
     color: #8bc34a;
 }
 
 @media (max-width: 1024px) {
-
+    .content-image iframe {
+        max-width: 100%;    
+        width: 100%;
+        border: none;
+    }
     .agenda-container,
     .barcelona-container,
     .expect-container,
@@ -1129,11 +1257,9 @@ figcaption {
         padding-left: 20px;
         padding-right: 20px;
     }
-
     .hero-title {
-        margin-bottom: 20px;
+        margin-bottom: 20px!important;
     }
-
     .text-block {
         gap: 30px;
     }
@@ -1151,13 +1277,11 @@ figcaption {
     .barcelona-experiences {
         gap: 20px;
     }
-
     .content-text .text-block p {
         font-size: 26px;
         max-width: 100%;
         line-height: 1.4;
     }
-
     .experience-card {
         width: calc(100%/3 - 15px);
         min-width: 180px;
@@ -1290,12 +1414,10 @@ figcaption {
         max-width: 100%;
         margin: 0 auto;
     }
-
     .content-text .text-block p {
         font-size: 20px;
         line-height: 1.4;
     }
-
     .info-grid {
         flex-direction: column;
         gap: 18px;
@@ -1308,11 +1430,9 @@ figcaption {
         width: 100%;
         gap: 4px;
     }
-
     .info-item p {
         font-size: 16px;
     }
-
     .venue-description p {
         font-size: 16px;
         width: 100%;
@@ -1338,14 +1458,12 @@ figcaption {
     }
 
     .expect-title {
-        font-size: 24px !important;
+        font-size: 24px!important;
     }
-
     .expect-list {
         max-width: 100%;
         padding-top: 10px;
     }
-
     .expect-list li {
         font-size: 16px;
         padding: 10px 8px;
@@ -1356,8 +1474,8 @@ figcaption {
     }
 
     .agenda-title {
-        font-size: 18px;
-        margin-bottom: 18px;
+        font-size: 18px!important;
+        margin-bottom: 18px!important;
     }
 
     .agenda-day {
@@ -1365,7 +1483,7 @@ figcaption {
     }
 
     .agenda-day-title {
-        font-size: 16px;
+    font-size: 16px!important;
     }
 
     .agenda-day li {
@@ -1388,8 +1506,8 @@ figcaption {
     }
 
     .barcelona-title {
-        font-size: 22px;
-        line-height: 1.2;
+        font-size: 22px!important;
+        line-height: 1.2!important;
         max-width: 100%;
     }
 
@@ -1433,7 +1551,7 @@ figcaption {
     }
 
     .travel-title h2 {
-        font-size: 22px;
+        font-size: 22px!important;
     }
 
     .travel-content ul {
@@ -1484,22 +1602,19 @@ figcaption {
         flex-direction: column;
         gap: 20px;
     }
-
     .agenda-day {
         width: 100%;
-        max-width: 100% !important;
+        max-width: 100%!important;
         border-right: none;
         border-bottom: 1.5px solid #9ED274;
         padding: 0px;
         padding-bottom: 10px;
     }
-
     .experience-card {
         width: 100%;
         max-width: 100%;
         gap: 10px;
     }
-
     .site-footer {
         padding: 24px 0 18px 0;
     }
