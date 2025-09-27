@@ -204,6 +204,7 @@ figcaption {
     overflow: hidden;
     margin-bottom: 55px;
 }
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -214,20 +215,7 @@ figcaption {
     background: rgba(36, 57, 64, 0.75);
     z-index: 1;
 }
-.video-background {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-.hero-section  iframe {
-    border: none;
-    width: 100%;
-    height: 100%;
-}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -331,7 +319,6 @@ figcaption {
     max-width: 685px;
     width: 100%;
 }
-
 .content-text {}
 
 .content-text .text-block p {
@@ -990,6 +977,11 @@ figcaption {
 }
 
 @media (max-width: 1024px) {
+    .content-image iframe {
+        max-width: 100%;    
+        width: 100%;
+        border: none;
+    }
     .agenda-container,
     .barcelona-container,
     .expect-container,
